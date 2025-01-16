@@ -32,12 +32,16 @@
       "sway/window"
     {{ else if eq .chezmoi.hostname "razer" }}
       "hyprland/window"
+    {{ else if eq .chezmoi.hostname "mordor" }}
+      "hyprland/window"
     {{ end }}
     ],
     "modules-left": [
     {{ if eq .chezmoi.hostname "moria" }}
       "sway/workspaces"
     {{ else if eq .chezmoi.hostname "razer" }}
+      "hyprland/workspaces"
+    {{ else if eq .chezmoi.hostname "mordor" }}
       "hyprland/workspaces"
     {{ end }}
     ],
@@ -63,6 +67,8 @@
       "HDMI-A-1"
     {{ else if eq .chezmoi.hostname "razer" }}
       "eDP-1"
+    {{ else if eq .chezmoi.hostname "mordor" }}
+      "HDMI-A-1"
     {{ end }}
     ],
     "position": "bottom",
