@@ -79,19 +79,19 @@ output "*" {
 bg ~/.config/bg-image fill
 }
 
-input "2:14:ETPS/2_Elantech_Touchpad" {
-       dwt enabled
-       tap enabled
-       natural_scroll enabled
-#       middle_emulation enabled
-   }
- output "DP-1" {
+# input "2:14:ETPS/2_Elantech_Touchpad" {
+#        dwt enabled
+#        tap enabled
+#        natural_scroll enabled
+# #       middle_emulation enabled
+#    }
+ output "DP-2" {
    pos 0 0
    res 3840x2160
    scale 1
  }
 
- output "HDMI-A-1" {
+ output "DP-1" {
    pos 3840 0
    res 3840x2160
    scale 1
