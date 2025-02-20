@@ -6,6 +6,10 @@ default_border none
 default_border pixel 2
 default_floating_border pixel 2
 hide_edge_borders none
+blur enable
+shadows enable
+corner_radius 5
+default_dim_inactive 0.1
 focus_wrapping no
 focus_follows_mouse yes
 focus_on_window_activation smart
@@ -79,19 +83,19 @@ output "*" {
 bg ~/.config/bg-image fill
 }
 
-# input "2:14:ETPS/2_Elantech_Touchpad" {
-#        dwt enabled
-#        tap enabled
-#        natural_scroll enabled
-# #       middle_emulation enabled
-#    }
- output "DP-2" {
+input "2:14:ETPS/2_Elantech_Touchpad" {
+       dwt enabled
+       tap enabled
+       natural_scroll enabled
+#       middle_emulation enabled
+   }
+ output "DP-1" {
    pos 0 0
    res 3840x2160
    scale 1
  }
 
- output "DP-1" {
+ output "HDMI-A-1" {
    pos 3840 0
    res 3840x2160
    scale 1
@@ -111,8 +115,8 @@ mode "resize" {
 }
 
 
-gaps inner 4
-gaps horizontal 4
+gaps inner 5
+gaps horizontal 5
 exec udiskie -s
 exec dunst
 exec blueman-applet
