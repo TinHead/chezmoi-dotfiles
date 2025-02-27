@@ -40,26 +40,10 @@
       "format": "{}% "
     },
     "modules-center": [    
-    {{ if eq .chezmoi.hostname "thinq" }}
       "sway/window"
-    {{ else if eq .chezmoi.hostname "razer" }}
-      "hyprland/window"
-    {{ else if eq .chezmoi.hostname "mordor" }}
-      "sway/window"
-    {{ else if eq .chezmoi.hostname "leno" }}
-      "hyprland/window"
-    {{ end }}
     ],
     "modules-left": [
-    {{ if eq .chezmoi.hostname "thinq" }}
       "sway/workspaces"
-    {{ else if eq .chezmoi.hostname "razer" }}
-      "hyprland/workspaces"
-    {{ else if eq .chezmoi.hostname "mordor" }}
-      "sway/workspaces"
-    {{ else if eq .chezmoi.hostname "leno" }}
-      "hyprland/workspaces"
-    {{ end }}
     ],
     "modules-right": [
       "cpu",
