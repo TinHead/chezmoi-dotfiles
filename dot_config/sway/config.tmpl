@@ -105,16 +105,16 @@ input "2:14:ETPS/2_Elantech_Touchpad" {
 #       middle_emulation enabled
    }
 {{ end }}
-{{ if eq .chezmoi.hostname "thinq "}}
+{{ if eq .chezmoi.hostname "thinq"}}
  output "DP-2" {
    pos 3840 0
-   res 3440x1440@59.97Hz
+   res 3840x2160@59.99Hz
    scale 1
  }
 
  output "DP-1" {
    pos 0 0
-   res 3840x2160
+   res 3840x2160@59.99Hz
    scale 1
  }
 {{ else if eq .chezmoi.hostname "mordor" }}
@@ -143,6 +143,10 @@ mode "resize" {
   bindsym l resize grow width 10 px
 }
 
+{{ if eq .chezmoi.hostname "thinq"}}
+workspace 1 output DP-1
+workspace 2 output DP-2
+{{ end }}
 
 gaps inner 5
 gaps horizontal 5
