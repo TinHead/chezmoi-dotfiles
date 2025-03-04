@@ -10,7 +10,7 @@ decorations_theme_variant = "Dark" # "Dark"
 
 [font]
 
-size = 14.0
+size = 13.0
 
 [general]
 # $HOME/.config/alacritty/alacritty.toml

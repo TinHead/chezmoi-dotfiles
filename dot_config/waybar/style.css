@@ -45,7 +45,7 @@
 
 #workspaces button {
   padding: 0 2px;
-  color: @base05;
+  color: @foreground;
 }
 
 #workspaces button.visible {
@@ -54,7 +54,7 @@
 #workspaces button.focused {
   border-radius: 4px;
   /* background-color:  @base0F; */
-  background-color:  @purple;
+  border-bottom: 2px solid @purple;
 }
 
 #workspaces button.urgent {
