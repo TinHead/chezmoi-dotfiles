@@ -109,13 +109,13 @@ input "2:14:ETPS/2_Elantech_Touchpad" {
  output "DP-2" {
    pos 3840 0
    res 3840x2160@59.99Hz
-   scale 1
+   scale 1.25
  }
 
  output "DP-1" {
    pos 0 0
    res 3840x2160@59.99Hz
-   scale 1
+   scale 1.25
  }
 {{ else if eq .chezmoi.hostname "mordor" }}
  output "HDMI-A-1" {
