@@ -109,13 +109,13 @@ input "2:14:ETPS/2_Elantech_Touchpad" {
  output "DP-2" {
    pos 3840 0
    res 3840x2160@59.99Hz
-   scale 1.25
+   scale 1
  }
 
  output "DP-1" {
    pos 0 0
    res 3840x2160@59.99Hz
-   scale 1.25
+   scale 1
  }
 {{ else if eq .chezmoi.hostname "mordor" }}
  output "HDMI-A-1" {
@@ -153,8 +153,4 @@ gaps horizontal 5
 exec udiskie -s
 exec dunst
 exec blueman-applet
-# exec swayidle -w timeout 300 'swaylock -f -i ~/.config/bg-image' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -f -i ~/.config/bg-image'
-# exec solaar -w hide
-# exec source ~/.config/fish/conf.d/flatpak.fish
 include '$HOME/.config/sway/config.d/*.conf'
-# exec "/nix/store/2g5287nbipd9xr1mqjp1m9pmg292nhal-dbus-1.14.8/bin/dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_SESSION_TYPE NIXOS_OZONE_WL; systemctl --user start sway-session.target"
