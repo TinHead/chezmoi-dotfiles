@@ -149,6 +149,15 @@ workspace 1 output DP-1
 workspace 2 output DP-2
 {{ end }}
 
+for_window [title="TaskWarrior"] {
+        move scratchpad
+        floating enable
+        resize set 800 600
+        move position 800 20
+    }
+    bindsym $mod+t exec swaymsg [title="TaskWarrior"] scratchpad show || $(exec  alacritty -t 'TaskWarrior' -e vit & sleep 0.2 && swaymsg [title="TaskWarrior"] scratchpad show)
+
+
 gaps inner 5
 gaps horizontal 5
 exec udiskie -s
