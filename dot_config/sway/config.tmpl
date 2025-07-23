@@ -49,7 +49,7 @@ bindsym Mod4+7 workspace number 7
 bindsym Mod4+8 workspace number 8
 bindsym Mod4+9 workspace number 9
 bindsym Mod4+Alt+l exec swaylock -i ~/.config/bg-image
-bindsym Mod4+Alt+p exec rofi-rbw
+bindsym Mod4+Alt+p exec rofi-rbw -a copy --use-notify-send | notify-send -i /usr/share/icons/Paper/scalable/actions/edit-copy-symbolic.svg -t 6000 "Copied to clipboard"
 bindsym Mod4+Ctrl+Print exec grimshot --notify copy area
 bindsym Mod4+Down focus down
 bindsym Mod4+Left focus left
