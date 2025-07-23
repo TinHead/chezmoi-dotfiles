@@ -48,7 +48,7 @@ bindsym Mod4+7 workspace number 7
 bindsym Mod4+8 workspace number 8
 bindsym Mod4+9 workspace number 9
 bindsym Mod4+Alt+l exec swaylock -i ~/.config/bg-image
-bindsym Mod4+Alt+p exec gopass ls --flat | rofi -dmenu -p gopass | xargs --no-run-if-empty gopass show --clip
+bindsym Mod4+Alt+p exec rofi-rbw -a copy --use-notify-send | notify-send -i /usr/share/icons/Paper/scalable/actions/edit-copy-symbolic.svg -t 6000 "Copied to clipboard"
 bindsym Mod4+Ctrl+Print exec grimshot --notify copy area
 bindsym Mod4+Down focus down
 bindsym Mod4+Left focus left
@@ -147,6 +147,15 @@ mode "resize" {
 workspace 1 output DP-1
 workspace 2 output DP-2
 {{ end }}
+
+for_window [title="TaskWarrior"] {
+        move scratchpad
+        floating enable
+        resize set 800 600
+        move position 800 20
+    }
+    bindsym $mod+t exec swaymsg [title="TaskWarrior"] scratchpad show || $(exec  alacritty -t 'TaskWarrior' -e vit & sleep 0.2 && swaymsg [title="TaskWarrior"] scratchpad show)
+
 
 gaps inner 5
 gaps horizontal 5
