@@ -18,12 +18,10 @@
             		"warning": 30,
             		"critical": 15
         	},
-        	"format": "{icon} {capacity}%",
-        	"format-charging": " {capacity}%",
-        	"format-plugged": "{capacity}%",
-        	"format-alt": "{time} {icon}",
-        	"format-full": " {capacity}%",
-        	"format-icons": ["", "", ""]
+            "format": "<span face='FontAwesome'>{icon}</span> {capacity}%",
+            "format-charging": "<span face='FontAwesome'></span> {capacity}%",
+            "format-plugged": "<span face='FontAwesome'></span> {capacity}%",
+            "format-icons": ["", "", "", "", ""]
 	},
     "disk#home": {},
     "disk#root": {},
@@ -66,7 +64,7 @@
     {{ if eq .chezmoi.hostname "thinq" }}
       "DP-1",
       "DP-2"
-    {{ else if (or (eq .chezmoi.hostname "razer") (eq .chezmoi.hostname "leno")) }}
+    {{ else if (or (eq .chezmoi.hostname "razer") (eq .chezmoi.hostname "frk")) }}
       "eDP-1"
     {{ else if eq .chezmoi.hostname "mordor" }}
       "HDMI-A-1"
