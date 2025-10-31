@@ -94,6 +94,10 @@ bindsym Mod4+space focus mode_toggle
 bindsym Mod4+v splitv
 bindsym Mod4+w layout tabbed
 
+{{if eq .chezmoi.hostname "razer" }}
+bindswitch lid:on  output eDP-1 disable
+bindswitch lid:off output eDP-1 enable
+{{end}}
 output "*" {
 bg ~/.config/bg-image fill
 }
@@ -104,6 +108,18 @@ input "2:14:ETPS/2_Elantech_Touchpad" {
        natural_scroll enabled
 #       middle_emulation enabled
    }
+ output "eDP-1" disable
+ output "DP-1" {
+   pos 0 0
+   res 3840x2160@59.99Hz
+   scale 1
+ }
+
+ output "DP-2" {
+   pos 3840 0
+   res 3840x2160@59.99Hz
+   scale 1
+ }
 {{ end }}
 {{ if eq .chezmoi.hostname "thinq"}}
  output "DP-2" {

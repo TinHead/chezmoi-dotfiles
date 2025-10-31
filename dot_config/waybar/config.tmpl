@@ -66,7 +66,9 @@
       "DP-1",
       "DP-2"
     {{ else if (or (eq .chezmoi.hostname "razer") (eq .chezmoi.hostname "frk")) }}
-      "eDP-1"
+      "eDP-1",
+      "DP-1",
+      "DP-2"
     {{ else if eq .chezmoi.hostname "mordor" }}
       "HDMI-A-1"
     {{ end }}
